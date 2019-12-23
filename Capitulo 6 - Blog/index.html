@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Mi primer Blog</title>
+
+    <style>
+      .subir{
+        margin-top: -50px;
+      }
+    </style>
   </head>
   <body>
       <!-- NAVBAR -->
-      <div class="container-fluid bg-primary">
+      <div class="container-fluid bg-primary fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="index.html">Mi blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,25 +39,94 @@
       </div><!-- NAVBAR -->
 
       <!--Sistemas de columnas-->
-      <div class="container-fluid"> 
+      <div class="container-fluid mt-5 pt-5"> 
         <div class="row">
 
           <!-- Columna Izquierda -->
           <div class="col-sm-4 col-lg-3">
+            <!-- Información Personal -->
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <img src="imagenes/iceland.jpg" class="card-img-top" alt="...">
+              <div class="text-center subir">
+                <img src="imagenes/avatar-dhg.png" alt="" class="rounded-circle border" width="100px">
+              </div>
+              <div class="card-body text-center">
+                <h6 class="card-title font-weight-bold">Card title</h6>
+                <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-            </div>
-          </div><!-- Columna Izquierda -->
+            </div><!-- Información Personal -->
+            
+            <!-- Comentarios -->
+            <div class="card mt-3">
+              <div class="card-header">
+                Quote
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+              </div>
+            </div><!-- Comentarios -->
+
+          </div><!-- Columna Izquierda -->          
 
           <!-- Columna Derecha -->
-          <div class="col-sm-8 col-lg-9">
-            <h1>Columna 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perferendis sit, ut nobis consectetur molestiae porro ratione esse quisquam impedit iusto non odio ea cupiditate omnis deserunt corrupti dolores ipsam.</p>
+          <div class="col-sm-8 col-lg-9 mt-3 mt-sm-0">
+            <div class="card mr-sm-3">
+              <ul class="list-group list-group-flush">
+                <!-- Articulo -->
+                <li class="list-group-item">
+                  <div class="row my-3">
+                    <!-- Avatar -->
+                    <div class="col-2 col-sm-3 col-lg-1">
+                      <img src="imagenes/avatar-dhg.png" alt="" class="rounded-circle border" width="60px">
+                    </div><!-- Avatar -->
+                    <!-- Contenido -->
+                    <div class="col-10 col-sm-9 col-lg-11">
+                      <p class="card-text float-right"><small class="text-muted">3 mins ago</small></p>
+                      <h6 class="font-weight-bold">Lorem, ipsum dolor.</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, illo.</p>
+                      <a href="#" class="btn btn-outline-primary">Más información</a>
+                    </div><!-- Contenido -->
+                  </div>
+                </li><!-- Articulo -->
+                <!-- Articulo -->
+                <li class="list-group-item">
+                  <div class="row my-3">
+                    <!-- Avatar -->
+                    <div class="col-2 col-sm-3 col-lg-1">
+                      <img src="imagenes/avatar-dhg.png" alt="" class="rounded-circle border" width="60px">
+                    </div><!-- Avatar -->
+                    <!-- Contenido -->
+                    <div class="col-10 col-sm-9 col-lg-11">
+                      <p class="card-text float-right"><small class="text-muted">4 mins ago</small></p>
+                      <h6 class="font-weight-bold">Lorem ipsum dolor sit amet consectetur adipisicing.</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nihil laborum asperiores voluptate unde quasi doloremque nam alias ut assumenda debitis, nesciunt, esse, eligendi earum? Sequi adipisci temporibus aut magnam.</p>
+                      <a href="#" class="btn btn-outline-primary">Más información</a>
+                    </div><!-- Contenido -->
+                  </div>
+                </li><!-- Articulo -->
+                <!-- Articulo -->
+                <li class="list-group-item">
+                  <div class="row my-3">
+                    <!-- Avatar -->
+                    <div class="col-2 col-sm-3 col-lg-1">
+                      <img src="imagenes/avatar-dhg.png" alt="" class="rounded-circle border" width="60px">
+                    </div><!-- Avatar -->
+                    <!-- Contenido -->
+                    <div class="col-10 col-sm-9 col-lg-11">
+                      <p class="card-text float-right"><small class="text-muted">5 mins ago</small></p>
+                      <h6 class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, vitae!</h6>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nemo officiis debitis optio. Blanditiis voluptatibus labore dicta vel asperiores laudantium, molestiae aspernatur nesciunt vitae veritatis. Repudiandae necessitatibus, accusantium minus ab dignissimos totam labore. Eius enim iure quam laborum tenetur molestiae optio? Assumenda modi nihil possimus impedit nisi aliquam laborum. Deleniti!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut atque tempora suscipit dolores dignissimos, reprehenderit sed delectus, unde rem facere corrupti excepturi quam molestiae, iste quis blanditiis cumque in perferendis sapiente eaque. Facere assumenda corporis, nesciunt voluptas maiores optio sapiente. Deserunt nemo inventore error fuga tenetur nostrum. Accusantium quisquam cupiditate optio. Dolores commodi vel temporibus sapiente quidem odit nemo, quaerat praesentium ducimus vitae quisquam amet nostrum unde nesciunt, placeat voluptate porro quia dolorum architecto assumenda necessitatibus sit dolore id fugit! Earum eaque dignissimos voluptatem, exercitationem officia saepe beatae ullam? Illo, asperiores. Dicta harum exercitationem non animi laboriosam, eaque quibusdam voluptates?</p>
+                      <a href="#" class="btn btn-outline-primary">Más información</a>
+                    </div><!-- Contenido -->
+                  </div>
+                </li><!-- Articulo -->                
+              </ul>
+            </div>
           </div><!-- Columna Derecha -->
           
         </div>

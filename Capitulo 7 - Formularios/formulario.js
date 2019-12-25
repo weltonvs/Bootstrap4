@@ -6,5 +6,17 @@ $("#formulario").submit(event => {
 });
 
 function enviar(){
-    console.log("Enviado perfectamente");
+    var datos = $("#formulario").serialize(); //Toma los datos y los lleva a un arreglo.
+    //Creando el Ajax con JQuery.
+    $.ajax({
+        type: "post",
+        data: datos,
+        success: function(texto){
+            if(texto){
+                correcto();
+            } else {
+                phpError();
+            }
+        }
+    })
 }

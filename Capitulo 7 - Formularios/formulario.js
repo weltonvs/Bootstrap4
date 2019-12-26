@@ -10,6 +10,7 @@ function enviar(){
     //Creando el Ajax con JQuery.
     $.ajax({
         type: "post",
+        url: "formulario.js",
         data: datos,
         success: function(texto){
             if(texto){
@@ -19,4 +20,12 @@ function enviar(){
             }
         }
     })
+}
+
+function correcto(){
+    $("#mensajeExito").removeClass("d-none");
+}
+
+function phpError(){
+    $("#mensajeError").removeClass("d-none");
 }

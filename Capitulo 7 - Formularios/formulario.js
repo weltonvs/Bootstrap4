@@ -10,10 +10,10 @@ function enviar(){
     //Creando el Ajax con JQuery.
     $.ajax({
         type: "post",
-        url: "formulario.js",
+        url: "formulario.php",
         data: datos,
         success: function(texto){
-            if(texto){
+            if(texto == "exito"){
                 correcto();
             } else {
                 phpError();

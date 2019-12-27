@@ -16,16 +16,17 @@ function enviar(){
             if(texto == "exito"){
                 correcto();
             } else {
-                phpError();
+                phpError(texto);
             }
         }
-    })
+    });
 }
 
 function correcto(){
     $("#mensajeExito").removeClass("d-none");
 }
 
-function phpError(){
+function phpError(texto){
     $("#mensajeError").removeClass("d-none");
+    $("#mensajeError").html(texto);
 }

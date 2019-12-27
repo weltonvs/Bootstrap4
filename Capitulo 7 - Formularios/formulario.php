@@ -1,6 +1,9 @@
 <?php
     //$nombre = $_POST["nombre"];
     $Error = '';//Variable que devolverá el error cometido.
+    $nombre = '';
+    $email = '';
+    $mensaje = '';
     // Validando el Nombre.
     if(empty($_POST["nombre"])){//Probar si al campo nombre esta vacio.
         $Error = 'Ingrese un nombre</br>';
@@ -36,8 +39,8 @@
      */
     //Cuerpo del mensaje
     $cuerpo = 'nombre: '.$nombre.'\n';
-    $cuerpo = 'Email: '.$email.'\n';
-    $cuerpo = 'Mensaje: '.$mensaje.'\n';
+    $cuerpo .= 'Email: '.$email.'\n';
+    $cuerpo .= 'Mensaje: '.$mensaje.'\n';
 
     //Dirección de correo.
     $EnviarA = 'weltonvs@hotmail.com';
@@ -46,7 +49,7 @@
     //Enviar correo
     if($Error == ''){
         $success = mail($EnviarA,$Asunto,$cuerpo,'de: '.$email);
-        echo 'éxito';
+        echo 'exito';
     } else {
         echo $Error;
     }

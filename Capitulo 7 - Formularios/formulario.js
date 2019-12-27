@@ -1,6 +1,6 @@
 //console.log("Funcionando");
 
-$("#formulario").submit(event => {
+$("#formulario").submit(function(event) {
     event.preventDefault();//Almacena los datos del formulario sin refrescar el sitio web.
     enviar();
 });

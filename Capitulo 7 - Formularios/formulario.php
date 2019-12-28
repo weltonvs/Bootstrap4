@@ -4,6 +4,7 @@
     $nombre = '';
     $email = '';
     $mensaje = '';
+    error_reporting(-1);
     // Validando el Nombre.
     if(empty($_POST["nombre"])){//Probar si al campo nombre esta vacio.
         $Error = 'Ingrese un nombre</br>';
@@ -21,7 +22,7 @@
         if(!filter_var($email,FILTER_VALIDATE_EMAIL)){//Verificar si hay correo valido.
             $Error .= 'Ingrese un correo electronico válido</br>';
         } else {
-            $email = filter_var($email, FILTER_SANITIZE_STRING);//Eliminar caracteres estraños.
+            $email = filter_var($email, FILTER_SANITIZE_EMAIL);//Eliminar caracteres estraños.
         }
     }
 
@@ -38,18 +39,31 @@
      * Envio de correo desde php
      */
     //Cuerpo del mensaje
-    $cuerpo = 'nombre: '.$nombre.'\n';
-    $cuerpo .= 'Email: '.$email.'\n';
-    $cuerpo .= 'Mensaje: '.$mensaje.'\n';
+    $cuerpo = "";
+    $cuerpo .= "nombre: ";
+    $cuerpo .= $nombre;
+    $cuerpo .= "\n";
+    
+    //Correo
+    $cuerpo .= "Email: ";
+    $cuerpo .= $email;
+    $cuerpo .= "\n";
+
+
+    $cuerpo .= "Mensaje: ";
+    $cuerpo .= $mensaje;
+    $cuerpo .= "\n";
 
     //Dirección de correo.
     $EnviarA = 'weltonvs@hotmail.com';
-    $Asunto = 'Mensaje de mi nuevo sitio Web.';
+    $Asunto = 'Mensaje de mi nuevo sitio Web.';    
+   
 
     //Enviar correo
-    if($Error == ''){
-        $success = mail($EnviarA,$Asunto,$cuerpo,'de: '.$email);
-        echo 'exito';
+    if($Error == '' && mail($EnviarA, $Asunto, $cuerpo)){
+        
+        $success = true;
+        echo "exito";
     } else {
         echo $Error;
     }

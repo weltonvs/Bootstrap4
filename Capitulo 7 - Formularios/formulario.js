@@ -13,7 +13,7 @@ function enviar(){
         url: "formulario.php",
         data: datos,
         success: function(texto){
-            if(texto == "exito"){
+            if(texto == 'exito'){
                 correcto();
             } else {
                 phpError(texto);
@@ -24,9 +24,10 @@ function enviar(){
 
 function correcto(){
     $("#mensajeExito").removeClass("d-none");
+    $("#mensajeError").addClass("d-none");
 }
 
 function phpError(texto){
-    $("#mensajeError").removeClass("d-none");
+    $("#mensajeError").removeClass("d-none");    
     $("#mensajeError").html(texto);
 }
